@@ -6,7 +6,7 @@ if(MSVC AND MSVC_VERSION GREATER_EQUAL 1900)  # VS2015 or newer
     target_link_options(d3d8lib INTERFACE /SAFESEH:NO)
 endif()
 
-if(MSVC AND MSVC_VERSION LESS 1600)  # older than VS2010
+if(MSVC AND MSVC_VERSION LESS 1400)  # older than VS2005
     target_include_directories(d3d8lib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/extra)
 endif()
 
